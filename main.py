@@ -2,6 +2,7 @@ import smtplib
 import random
 import datetime
 import pandas
+import os
 
 # - Extra Hard Starting Project -#
 
@@ -15,7 +16,7 @@ import pandas
 # 4. Send the letter generated in step 3 to that people's email address.
 
 email = "adisenpai101@gmail.com"
-password = "ar_@12345"
+password = os.environ.get("EMAIL_PASS")
 receiver_mail = "adi.adityaraj24@gmail.com"
 
 peoples_df = pandas.read_csv('birthdays.csv')
